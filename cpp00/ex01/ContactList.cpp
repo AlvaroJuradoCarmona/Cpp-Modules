@@ -6,7 +6,7 @@
 /*   By: ajurado- <ajurado-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 13:06:02 by ajurado-          #+#    #+#             */
-/*   Updated: 2024/05/11 13:41:48 by ajurado-         ###   ########.fr       */
+/*   Updated: 2024/05/11 18:03:13 by ajurado-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,13 +81,10 @@ int main(void)
             if (i < 0 || i > 7 || (!phoneBook.getCircular() && i > phoneBook.getCurrentIndex() - 1))
                 std::cout << "Wrong index. Exiting search mode..." << std::endl;
             else
-            {
-                std::cout << "Here is your contact:" << std::endl;
                 phoneBook.printSelectedContact(i);
-            }
         }
         else if (command.compare("EXIT") != 0)
-            std::cout << "Wrong command! Valid options are: ADD / SEARCH / EXIT" << std::endl;
+            std::cout << "Wrong command!" << std::endl;
     }
     std::cout << "Exiting..." << std::endl;
     return (0);
